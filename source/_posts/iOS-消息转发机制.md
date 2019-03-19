@@ -81,5 +81,3 @@ SEL 就是未能处理的 selector，返回值为 BOOL 表示是否增加了新�
 
 ```
 [Demo](https://github.com/MaricleZhang/MessageForwardingDemo.git)
-
-![yj_black_popup@2x.png](https://upload-images.jianshu.io/upload_images/2403444-9b6c574ba6827d3a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
