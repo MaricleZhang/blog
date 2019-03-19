@@ -65,7 +65,8 @@ SEL 就是未能处理的 selector，返回值为 BOOL 表示是否增加了新�
 
 #### 崩溃的规避
 
-创建 ```NSObject+CashHandle```的分类
+创建 `NSObject+CashHandle`的分
+
 
 ```
 - (NSMethodSignature *)methodSignatureForSelector:(SEL)aSelector
