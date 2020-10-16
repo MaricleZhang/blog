@@ -131,11 +131,11 @@ navbar:
     px: 3  # 模糊像素，只能为数字，数字越大模糊度越高
     alpha: 0.7   # 透明度，只能为数字，范围 0~1，数字越大透明度越低，注意透明过度可能看不清菜单字体
   menu:  # 可自行增减，key 用来关联 languages/*.yml，如不存在关联则显示 key 本身的值；icon 是 css class，可以省略；增加 name 可以强制显示指定名称
-    - { key: 'home', link: '/', icon: 'iconfont icon-home-fill' }
-    - { key: 'archive', link: '/archives/', icon: 'iconfont icon-archive-fill' }
-    - { key: 'category', link: '/categories/', icon: 'iconfont icon-category-fill' }
-    - { key: 'tag', link: '/tags/', icon: 'iconfont icon-tags-fill' }
-    - { key: 'about', link: '/about/', icon: 'iconfont icon-user-fill' }
+    - { key: '首页', link: '/', icon: 'iconfont icon-home-fill' }
+    - { key: '归档', link: '/archives/', icon: 'iconfont icon-archive-fill' }
+    - { key: '分类', link: '/categories/', icon: 'iconfont icon-category-fill' }
+    - { key: '标签', link: '/tags/', icon: 'iconfont icon-tags-fill' }
+    - { key: '关于', link: '/about/', icon: 'iconfont icon-user-fill' }
     #- { key: 'links', link: '/links/', icon: 'iconfont icon-link-fill' }  # 友链页，把前面#去掉即可展示
 
 search: # 搜索栏，基于 hexo-generator-search 插件，若已安装其他搜索插件请关闭此功能，以避免生成多余的索引文件。
@@ -185,7 +185,7 @@ index:
   post_default_img: '' # 默认的文章封面图，当没有指定 index_img 时会使用该图片，若都为空则不显示任何图片
   slogan:  # 首页副标题的独立设置
     enable: true  # 为 false 则不显示任何内容
-    text: 'Welcome MaricleZhang Blog'  # 为空则按 hexo config.subtitle 显示
+    text: "Welcome MaricleZhang's Blog"  # 为空则按 hexo config.subtitle 显示
   auto_excerpt:
     enable: true
   post_url_target: _self  # available: _blank | _self
