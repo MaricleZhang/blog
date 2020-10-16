@@ -13,6 +13,8 @@ tags:
 
 LMForm 是基于MVVM轻量级表单配置框架，把数据和事件整合为一个model，实现cell与model的绑定，只需操作model便可配置表单。项目地址：https://github.com/MaricleZhang/LMForm.git
 
+![FMForm结构图](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/365d51904eb0445088ea687f66073c9d~tplv-k3u1fbpfcp-watermark.image)
+
 ## 2. 功能
 
 1. 支持动态配置model来实现表单。
@@ -22,8 +24,7 @@ LMForm 是基于MVVM轻量级表单配置框架，把数据和事件整合为一
 5. 支持完全自定义cell类型。
 
 ## 3. 预览
-![form.gif](https://upload-images.jianshu.io/upload_images/2403444-17f9aee95b2e1792.gif?imageMogr2/auto-orient/strip)
-
+![FMForm.gif](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a22db9c3e739402eaf964ff3bd727468~tplv-k3u1fbpfcp-watermark.image)
 
 ## 4. 安装
  ### CocoaPods
