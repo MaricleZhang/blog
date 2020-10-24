@@ -22,7 +22,7 @@ tags:
 
 在上述流程中如果不能找对对应的 selector 时，这时候就会进入消息转发机制。消息转发机制可分为两个阶段，在这两个阶段中，有 3 次机会来处理之前未能处理 selector，越往后所花费的代价将越大，处理的灵活程度也就越高。如下图所示：
 
-![messageforward.png](https://upload-images.jianshu.io/upload_images/2403444-746884faa399cef7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![messageforward.png](https://github.com/MaricleZhang/reasource/blob/master/message_forward.png?raw=true)
 
 ### 动态特性：方法解析和消息转发
 
