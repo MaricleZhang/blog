@@ -8,7 +8,7 @@ CocoaPods是iOS项目的依赖管理工具，使用它可以方便的管理和�
 <!-- more -->
 ## 原理
 在创建私有库之前，我们有必要理解私有库的原理，
-![podfile、索引库和代码库关系图.png](http://upload-images.jianshu.io/upload_images/2403444-9206906d9b8dc9d7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![podfile、索引库和代码库关系图.png](https://github.com/MaricleZhang/reasource/blob/master/pod_spec_icon.png?raw=true)
 
 Podfile:工程的依赖描述文件。
 Spec:  该仓库存放索引描述文件.podspec，CocoaPods通过该文件对你真正存储代码工程的 Git 仓库进行索引与下载,下面会有对podspec的详细介绍。通过spec库来控制pod私有库的版本。
@@ -147,7 +147,7 @@ $ pod lib lint
 ZJMaricle passed validation.
 ```
 提交代码，我这里使用的`sourcetree`,本地代码库与远程库建立连接，这里就不在赘述了。并且给远程仓库打上tag，需要注意的是这里的tag就是创建私有库的版本号，需与 `.podspec`文件中的版本号保持一致。重要的事情说三遍：本地校验成功后在打tag，本地校验成功后在打tag，本地校验成功后在打tag。
-![给GitHub仓库打上tag.png](http://upload-images.jianshu.io/upload_images/2403444-e403c2147ebdea0f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![给GitHub仓库打上tag.png](https://github.com/MaricleZhang/reasource/blob/master/source_tree_tag.png?raw=true)
 ### 向私有的Spec Repo中提交podspec
 确认本地校验成功，并且打上tag后，终端进入到`ZJMaricle.podspec`同一目录下执行
 ```
