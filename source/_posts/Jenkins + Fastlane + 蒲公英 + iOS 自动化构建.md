@@ -1,4 +1,9 @@
-# Jenkins + Fastlane + 蒲公英 + iOS 自动化构建
+
+---
+title: Jenkins + Fastlane + 蒲公英 + iOS 自动化构建
+date: 
+tags:
+---
 
 ## jenkins
 
@@ -142,6 +147,21 @@ platform :ios do
   end
 end
 ```
+
+## 常见问题
+
+### 出现 fastlane: command not found
+这个情况一般是由于 jenkins 没有设置正确的 PATH，在命令行输入
+
+```
+echo $PATH
+```
+
+Manage Jenkins -> Configure System 选中Environment variables 在 key 中填写 PATH，在 value 中填写第一步中输出的结果 保存即可。如下图所示
+
+![gobal_path](https://github.com/MaricleZhang/reasource/blob/master/gobal_path.png?raw=true)
+
+
  
 
 
