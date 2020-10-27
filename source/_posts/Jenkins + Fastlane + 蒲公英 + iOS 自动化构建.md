@@ -148,6 +148,19 @@ platform :ios do
 end
 ```
 
+## 优化功能
+### 生成二维码
+
+把二维码显示在首页中，需要安装一个插件description setter plugin  步骤:Manage Jenkins -> Plugin Manager->选择description setter plugin,安装完成后在项目配置中Post-build Actions ->Regular expression 添加
+
+```
+download_URL:(.*)
+```
+如下图说明配置成功
+
+![building_after_show_qr_code](https://github.com/MaricleZhang/reasource/blob/master/building_after_show_qr_code.png?raw=true)
+
+
 ## 常见问题
 
 ### 出现 fastlane: command not found
