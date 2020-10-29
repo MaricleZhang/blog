@@ -172,7 +172,7 @@ download_URL:(.*)
 
 ### 发送到钉钉群
 
-Manage Jenkins -> Plugin Manager 安装dingtalk插件
+Manage Jenkins -> Plugin Manager 安装dingtalk插件,详情请参考[jenkins钉钉插件](https://jenkinsci.github.io/dingtalk-plugin/)
 
 ```
 if [[ $dingtalk == true ]]; then
@@ -184,7 +184,7 @@ if [[ $dingtalk == true ]]; then
   fi
   
   if [ -z ${dingtalktoken} ]; then
- 	dingtalktoken='b648f77cef19500e89b8168530ab00f160dc5c2fb41b41cd19da50420fc6e7cd'
+ 	dingtalktoken='b648f77cef19500e89b8168530ab00f160dc5c2fb41b41cd19da50420fc6e7'
   fi
 
   POD_LOG=''
@@ -201,7 +201,7 @@ if [[ $dingtalk == true ]]; then
   
     curl "https://oapi.dingtalk.com/robot/send?access_token=${dingtalktoken}" -H "Content-Type: application/json" -d ''"${data}"''
     if [[ $stable == true ]]; then
-      curl "https://oapi.dingtalk.com/robot/send?access_token=2f61c981f16837bfcdd9883d7bed5106df8c30a08fbf2f86f6e560a45b1d45ad" -H "Content-Type: application/json" -d ''"${data}"''
+      curl "https://oapi.dingtalk.com/robot/send?access_token=2f61c981f16837bfcdd9883d7bed5106df8c30a08fbf2f86f6e560a45b1d45" -H "Content-Type: application/json" -d ''"${data}"''
     fi
 
 fi
