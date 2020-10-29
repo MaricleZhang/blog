@@ -15,9 +15,9 @@ tags:
 
 目前比较流行的自动化流程工具是Fastlane，Fastlane是用Ruby语言编写的一套自动化工具集和框架，每一个工具实际都对应一个Ruby脚本，用来执行某一个特定的任务，而Fastlane核心框架则允许使用者通过类似配置文件的形式，将不同的工具有机而灵活的结合在一起，从而形成一个个完整的自动化流程。到目前为止，Fastlane的工具集基本上涵盖了打包，签名，测试，部署，发布，库管理等等移动开发中涉及到的内容。
 
-## jenkins
+## Jenkins
 
-### jenkins安装
+### Jenkins安装
 
 ```
 brew install jenkins
@@ -169,6 +169,43 @@ download_URL:(.*)
 如下图说明配置成功
 
 ![building_after_show_qr_code](https://github.com/MaricleZhang/reasource/blob/master/building_after_show_qr_code.png?raw=true)
+
+### 发送到钉钉群
+
+Manage Jenkins -> Plugin Manager 安装dingtalk插件
+
+```
+if [[ $dingtalk == true ]]; then
+  echo "=======================发送钉钉消息============================"
+  
+  CHANGE_LOG=''
+  if [[ $gitlog == true ]]; then
+     CHANGE_LOG=`git log --pretty=format:"\n - %h - %an, %ar : %s" -5`
+  fi
+  
+  if [ -z ${dingtalktoken} ]; then
+ 	dingtalktoken='b648f77cef19500e89b8168530ab00f160dc5c2fb41b41cd19da50420fc6e7cd'
+  fi
+
+  POD_LOG=''
+  #POD_LOG=$(cat commit_log.txt)
+  
+
+  data='{
+    "msgtype": "markdown",
+    "markdown": {
+        "title": "'${JOB_NAME}' iOS App下载",
+        "text": "![ipa地址]('${url}')\n ### '${JOB_NAME}'-'${BUILD_NUMBER}' \n ### '${branch}分支' \n\n '-------------' \n ### '备注：'\n '${marker}' \n '-------------' \n ### '主工程修改日志：' \n '${CHANGE_LOG}' \n '-------------' \n "
+    },
+  }'
+  
+    curl "https://oapi.dingtalk.com/robot/send?access_token=${dingtalktoken}" -H "Content-Type: application/json" -d ''"${data}"''
+    if [[ $stable == true ]]; then
+      curl "https://oapi.dingtalk.com/robot/send?access_token=2f61c981f16837bfcdd9883d7bed5106df8c30a08fbf2f86f6e560a45b1d45ad" -H "Content-Type: application/json" -d ''"${data}"''
+    fi
+
+fi
+```
 
 
 ## 常见问题
