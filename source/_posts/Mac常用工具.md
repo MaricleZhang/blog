@@ -69,6 +69,7 @@ http 请求
 #### 翻墙
 
 ShadowsocksX-NG
+V2ray
 
 #### iOS 崩溃解析工具
 
