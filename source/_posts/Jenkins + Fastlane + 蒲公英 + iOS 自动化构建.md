@@ -184,7 +184,7 @@ if [[ $dingtalk == true ]]; then
   fi
   
   if [ -z ${dingtalktoken} ]; then
- 	dingtalktoken='b648f77cef19500e89b8168530ab00f160dc5c2fb41b41cd19da50420fc6e7'
+ 	dingtalktoken='钉钉access_token'
   fi
 
   POD_LOG=''
@@ -201,7 +201,7 @@ if [[ $dingtalk == true ]]; then
   
     curl "https://oapi.dingtalk.com/robot/send?access_token=${dingtalktoken}" -H "Content-Type: application/json" -d ''"${data}"''
     if [[ $stable == true ]]; then
-      curl "https://oapi.dingtalk.com/robot/send?access_token=2f61c981f16837bfcdd9883d7bed5106df8c30a08fbf2f86f6e560a45b1d45" -H "Content-Type: application/json" -d ''"${data}"''
+      curl "https://oapi.dingtalk.com/robot/send?access_token="钉钉access_token" -H "Content-Type: application/json" -d ''"${data}"''
     fi
 
 fi
