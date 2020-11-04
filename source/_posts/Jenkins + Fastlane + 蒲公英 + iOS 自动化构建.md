@@ -207,6 +207,12 @@ if [[ $dingtalk == true ]]; then
 fi
 ```
 
+### 上传到appstore
+
+```
+xcrun altool --upload-app -f '/Users/yangda/.jenkins/workspace/JUApp-appstore/JUApp/build/JuApp.ipa' -t ios --apiKey 'apiKey' --apiIssuer 'apiIssuer' --verbose
+```
+
 
 ## 常见问题
 

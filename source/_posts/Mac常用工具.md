@@ -86,3 +86,7 @@ MWeb Typora
 ### 下载工具
 
 Motrix
+
+### mac cpu 控制
+
+macs fan control
