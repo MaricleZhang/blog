@@ -211,6 +211,15 @@ fi
 
 ```
 xcrun altool --upload-app -f '/Users/yangda/.jenkins/workspace/JUApp-appstore/JUApp/build/JuApp.ipa' -t ios --apiKey 'apiKey' --apiIssuer 'apiIssuer' --verbose
+
+```
+
+### 上传dSYM到Bugly
+
+```
+cp /Users/yangda/.jenkins/workspace/JUApp-appstore/JUApp/build/JuApp.app.dSYM.zip /Users/yangda/dsym/JuApp-${BUILD_NUMBER}.app.dSYM.zip
+
+curl -k "https://api.bugly.qq.com/openapi/file/upload/symbol?app_key=9f197add-b20b-4f37-8025-279f500a36e5&app_id=6887020ef2" --form "api_version=1" --form "app_id=app_id" --form "app_key= app_key" --form "symbolType=2"  --form "bundleId=com.shanju.ju" --form "productVersion=1.0" --form "fileName=JuApp.app.dSYM.zip" --form "file=@/Users/yangda/.jenkins/workspace/JUApp-appstore/JUApp/build/JuApp.app.dSYM.zip" --verbose
 ```
 
 
